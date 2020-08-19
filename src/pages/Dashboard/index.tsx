@@ -69,7 +69,7 @@ const Dashboard: React.FC = () => {
         .then(response => {
           const updatedFood = response.data;
           const existentFoods = foods.filter(
-            food => food.id !== updatedFood.id,
+            existentFood => existentFood.id !== updatedFood.id,
           );
 
           setFoods([...existentFoods, updatedFood]);
